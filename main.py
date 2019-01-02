@@ -15,27 +15,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import xbmc, xbmcgui
+import xbmc
 
-
-firefox_path = '/usr/bin/firefox'
-
-class BlahMainWindow(xbmcgui.Window):
-        # and define it as self
-        def __init__(self):
-            # add picture control to our window (self) with a hardcoded path name to picture
-            self.addControl(xbmcgui.ControlImage(0,0,300,225, '/home/panina/Hämtningar/plugin.program.advanced.emulator.launcher/media/p_pixel/Commodore Plus-4.png'))
+FIREFOX_PATH = '/usr/bin/firefox'
 
 def main():
-    # store our window as a short variable for easy of use
-    W = BlahMainWindow()
-    # run our window we created with our background jpeg image
-    W.doModal()
-    # after the window is closed, Destroy it.
-    del W
-
-    # stored for future reference 
-    #xbmc.executebuiltin("action(reloadkeymaps)")
+    """ main script, runs firefox, and gracefully exits afterwards. Hopefully """
+    xbmc.executebuiltin("System.ExecWait(" + FIREFOX_PATH + ")")
 
 if __name__ == "__main__":
     main()
