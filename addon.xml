@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.firefoxlauncher"
+       name="Firefox Launcher"
+       version="0.0.1"
+       provider-name="panina">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0"/>
+    </requires>
+    <extension point="xbmc.python.script" library="main.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">A launcher of pre-installed firefox</summary>
+        <description lang="en">A simple launcher, that runs firefox in its own window.</description>
+        <platform>all</platform>
+        <language/>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+	<forum/>
+	<source>https://github.com/nonbinary/kodi-firefoxlauncher</source>
+    </extension>
+</addon>
